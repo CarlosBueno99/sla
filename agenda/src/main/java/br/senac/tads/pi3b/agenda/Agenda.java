@@ -71,7 +71,7 @@ public class Agenda {
                 ResultSet generatedKeys = stmt.getGeneratedKeys();
                 if (generatedKeys.next()){
                     long idPessoa = generatedKeys.getLong(1);
-                    try (PreparedStatement stmt2 = conn.prepareStatement("ISERT INTO CONTATO (tipo, valor, idpessoa) VALUES (?,?,?)")){
+                    try (PreparedStatement stmt2 = conn.prepareStatement("INSERT INTO CONTATO (tipo, valor, idpessoa) VALUES (?,?,?)")){
                         
                         
                         
@@ -83,7 +83,7 @@ public class Agenda {
                         stmt2.executeUpdate();
                         
                     }
-                    try (PreparedStatement stmt3 = conn.prepareStatement("ISERT INTO CONTATO (tipo, valor, idpessoa) VALUES (?,?,?)")){
+                    try (PreparedStatement stmt3 = conn.prepareStatement("INSERT INTO CONTATO (tipo, valor, idpessoa) VALUES (?,?,?)")){
                         
                         
                         
